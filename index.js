@@ -9,10 +9,15 @@ const port = 3000;
 dotenv.config()
 
 app.use(bodyParser.json())
+app.use(express.static(__dirname + '/public'));
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
+
+app.get('/', (req, res) => {
+    res.sendFile('public/Customers.html', { root: __dirname});
+});
 
 app.get('/Customer', async (req, res) => {
     console.log(`Attempting to get all customers!`);
@@ -24,7 +29,7 @@ app.get('/Customer', async (req, res) => {
         res.statusCode = 500;
         res.send(error);
     } else {
-        console.log(`Received Data:`, data)
+        console.log(`Received Data:`, data.length)
         res.json(data);
     }
 })
