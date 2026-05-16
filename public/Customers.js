@@ -1,3 +1,19 @@
+async function createCustomer () {
+    await fetch (`/Customer`, {
+        method: 'POST',
+        body: JSON.stringify({
+            firstName: `${document.getElementById('firstName').value}`,
+            lastName: `${document.getElementById('lastName').value}`,
+            state: `${document.getElementById('state').value}`,
+        }),
+        headers: {
+            'content-type': 'application/json'
+        }
+    }).then((result) => result.json());
+
+    await loadCustomerData();
+}
+
 async function loadCustomerData() {
     await fetch('/Customer')
         .then((result) => result.json())
@@ -40,6 +56,11 @@ async function loadCustomerData() {
 
                 table.appendChild(customerTableRow);
             });
+
+            const preExistingTable = document.getElementById('customerInfo');
+            if(preExistingTable) {
+                preExistingTable.remove();
+            }
 
             document.body.appendChild(table);
         });
