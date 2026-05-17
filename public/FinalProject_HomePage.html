@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>F1 Statistics</title>
+    <link rel="stylesheet" href="FinalProject.css">
+    <script defer src="FinalProject_HomePage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/annyang@3/dist/annyang.iife.min.js"></script>
+    <script>
+        if (annyang.isSpeechRecognitionSupported()) {
+            const commands = {
+                'hello': () => { alert('Hello world!'); },
+                'change the color to *color': changeColor,
+                'navigate to *page': changePage,
+                
+        };
+
+        annyang.addCommands(commands);
+        
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function changePage(page) {
+            window.location.href = "BrandonDaniel_Assignment2_" + page + ".html";
+        }
+
+        function startAnnyang() {
+            annyang.start();
+        }
+        
+        function stopAnnyang() {
+            annyang.abort();
+        }
+    }
+</script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="logo-area">
+        <h1>F1 STATISTICS</h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="FinalProject_HomePage.html">HOME</a></li>
+            <li><a href="FinalProject_About.html">ABOUT</a></li>
+            <li><a href="FinalProject_DriverAndTeam.html">DRIVER AND TEAM SEARCH</a></li>
+            <li><a href="Customers.html">OUR USERBASE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-container">
+        <div class="content-area">
+            <div class="content-box">
+                <h1>Current Championship Standings</h1>
+                <table id="championshipTable">
+                    <tr>
+                        <th id="driverName">Driver Name</th>
+                        <th id="pointTotal">Points Scored</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="last-race-area">
+            <div class="lace-race-box">
+                <h1>Last Race Results</h1>
+                <table id="lastRaceTable">
+                    <tr></tr>
+                </table>
+            </div>
+        </div>
+        <div class="current-schedule-area">
+            <div class="current-schedule-box">
+                <h1>Schedule</h1>
+                <table id="racesSchedule">
+                    <tr>
+                        <th id="raceName">Race Name</th>
+                        <th id="raceDate">Race Date</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="current-roster-area">
+            <div class="current-roster-box">
+                <h1>Current Drivers</h1>
+                <table id="driversThisSeason">
+                    <tr>
+                        <th id="driverName">Driver Name</th>
+                        <th id="teamName">Team</th>
+                        <th id="driverNationality">Nationality</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

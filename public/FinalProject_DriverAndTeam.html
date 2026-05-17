@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>F1 Statistics Driver and Team Lookup</title>
+    <link rel="stylesheet" href="FinalProject.css">
+    <script defer src="FinalProject_DriverAndTeam.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/annyang@3/dist/annyang.iife.min.js"></script>
+    <script>
+        if (annyang.isSpeechRecognitionSupported()) {
+            const commands = {
+                'hello': () => { alert('Hello world!'); },
+                'change the color to *color': changeColor,
+                'navigate to *page': changePage,
+                
+        };
+
+        annyang.addCommands(commands);
+        
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function changePage(page) {
+            window.location.href = "BrandonDaniel_Assignment2_" + page + ".html";
+        }
+
+        function startAnnyang() {
+            annyang.start();
+        }
+        
+        function stopAnnyang() {
+            annyang.abort();
+        }
+    }
+</script>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="logo-area">
+        <h1>F1 STATISTICS</h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="FinalProject_HomePage.html">HOME</a></li>
+            <li><a href="FinalProject_About.html">ABOUT</a></li>
+            <li><a href="FinalProject_DriverAndTeam.html">DRIVER AND TEAM SEARCH</a></li>
+            <li><a href="Customers.html">OUR USERBASE</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-container">
+        <div class="content-area">
+            <div class="content-box">
+                <h1>Please Enter the Last Name of Any Driver Throughout F1 History</h1>
+                <form onsubmit="loadUpDriver(); return false;">
+                    <input type="text" id="driverName" required>
+                    <input type="submit" value="Search">
+                </form>
+                <table id="driverTable">
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="team-info-area">
+            <div class="team-info-box">
+                <h1>Please Enter the Name of Any Team Throughout F1 History</h1>
+                <form onsubmit="loadUpTeam(); return false;">
+                    <input type="text" id="teamName" required>
+                    <input type="submit" value="Search">
+                </form>
+                <table id="teamTable">
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

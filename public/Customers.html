@@ -2,10 +2,32 @@
     <head>
         <title>Our Customers!</title>
         <script src="Customers.js" defer></script>
+        <link rel="stylesheet" href="FinalProject.css">
     </head>
 
     <body>
-        <h1>Our Customers!</h1>
+
+
+        <div class="logo-area">
+        <h1>F1 STATISTICS</h1>
+    </div>
+
+    <!-- Navigation Section -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="FinalProject_HomePage.html">HOME</a></li>
+            <li><a href="FinalProject_About.html">ABOUT</a></li>
+            <li><a href="FinalProject_DriverAndTeam.html">DRIVER AND TEAM SEARCH</a></li>
+            <li><a href="Customers.html">OUR USERBASE</a></li>
+        </ul>
+    </nav>
+
+
+        
+    <div class="main-container">
+        <div class="content-area">
+            <div class="content-box"> 
+        <h1>Be a part of our dedicated userbase! Leave your name and the state that your from below!</h1>
         <form onsubmit="createCustomer(); return false;">
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName">
@@ -19,5 +41,6 @@
             <br>
             <input type="submit" name="Add Customer">
         </form>
+        </div></div></div>
     </body>
 </html>

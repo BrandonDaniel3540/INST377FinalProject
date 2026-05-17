@@ -1,0 +1,424 @@
+body {
+    background-color:black;
+  }
+  
+  #bar {
+    text-align: center;
+    background-color: #7c7c7c;
+    color: white;
+    padding: 5px;
+    font-family: cursive;
+  }
+  
+  #main-nav {
+    background-color:chartreuse;
+    text-align: center;
+  }
+  
+  #main-nav li {
+    color: white;
+    text-align: left;
+    display: inline-block;
+    position: left;
+    padding: 10px;
+  }
+  
+  #main-nav li:hover {
+    background-color: white;
+    color: white;
+  }
+
+  #main-nav ul li a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  #main-nav ul li a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  .content-box {
+    background-color:black;
+    color: chartreuse;
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0px;
+    font-family: Copperplate, Papyrus, fantasy;
+    float: left;
+    overflow: auto;
+  }
+  
+  .last-race-box {
+    background-color:black;
+    color: chartreuse;
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+
+  .team-info-box {
+    background-color:black;
+    color: chartreuse;
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+    float: right;
+  }
+
+  .current-schedule-box {
+    background-color:black;
+    color: chartreuse;
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    float: right;
+    border-radius: 0px;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+  
+  .current-roster-box {
+    background-color:black;
+    color: chartreuse;
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    float: right;
+    border-radius: 0px;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+
+  .current-userbase-box {
+    background-color:black;
+    color: chartreuse;
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0px;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+
+  th, td {
+  padding: 10px;
+  color: chartreuse;
+}
+
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.button-23 {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button-23:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.button-23:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.button-23:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+#lookupButton {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+#lookupButton:hover,
+#lookupButton:focus {
+  background-color: #07c;
+}
+
+#lookupButton:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+#lookupButton:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+table, th, td {
+  border: 2px solid;
+}
+
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+  .button-area {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dog-button-area {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .small-button-area {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .submit-button-area {
+    width: 10%;
+    text-align: left;
+  }
+
+  .logo-area {
+    font-size: 30px;
+    width: 68%;
+    text-align: right;
+    font-family: Copperplate, Papyrus, fantasy;
+    color:chartreuse;
+    margin-top: 2%;
+  }
+
+  a {
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+  
+  .content-area {
+    width: 20%;
+    margin-right: auto;
+    font-family: Copperplate, Papyrus, fantasy;
+    color:chartreuse;
+    float: left;
+    overflow: auto;
+  }
+
+  .last-race-area {
+    width: 40%;
+    font-family: Copperplate, Papyrus, fantasy;
+    color:chartreuse;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .team-info-area {
+    width: 20%;
+    font-family: Copperplate, Papyrus, fantasy;
+    color:chartreuse;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .current-schedule-area {
+    width: 40%;
+    margin-right: auto;
+    font-family: Copperplate, Papyrus, fantasy;
+    color:chartreuse;
+    overflow: auto;
+    text-align: center;
+    float: left;
+  }
+
+  .current-userbase-area {
+    width: 60%;
+    margin-right: auto;
+    font-family: Copperplate, Papyrus, fantasy;
+    color:chartreuse;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .current-roster-area {
+    width: 40%;
+    font-family: Copperplate, Papyrus, fantasy;
+    color:chartreuse;
+    overflow: auto;
+    text-align: center;
+    float:left;
+  }
+
+  .audio-box {
+    background-color:rgb(33, 134, 58);
+    color: white;
+    border: 2px solid white;
+    margin: 5px;
+    text-align: left;
+    padding: 5px;
+    border-radius: 0px;
+  }
+
+  .audio-area {
+    width: 58%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #contact {
+    text-align: center;
+    background-color: chartreuse;
+    float: right;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 28%;
+    margin-right: 5px;
+  }
+
+  .submit {
+    background-color: black;
+    color: white;
+    margin: 10px
+    }
+  
+  .submit:hover {
+    background-color: cadetblue;
+    font-size: 18px;
+  }
+  
+  .main-container {
+    /* border: 2px solid black; */
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+    gap: 0;
+    color:chartreuse;
+    font-family: Copperplate, Papyrus, fantasy;
+  }
+
+  .swiper {
+  width: 395px;
+  height: 607px;
+  float: left;
+}
+
+#map { height: 180px; }
+  
